@@ -1,0 +1,179 @@
+
+/* fuente importada para el titulo */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+/* fuente montserrat para el parrafo */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*variables en css para no cambiar colores o fuentes de forma manual 
+al actualizar mi proyecto para declarar variables se usa --*/
+:root{
+    --color-primario: #22D4FD;
+    --color-secundario: #000000;
+    --color-terciario: #f6f6f6;
+    --color-hover: #504f4f; 
+    --fuente-primaria: "Montserrat", sans-serif;
+    --fuente-secundaria: "Krona One", sans-serif;
+    /*para usar las varriables usamos var(--nombre-variable)*/
+}
+
+.header{
+   /*arriba derecho abajo izquierdo creo*/
+    padding: 2% 0% 0% 15%;
+    
+}
+
+.navegation{
+    display: flex;
+    gap: 80px;
+
+}
+
+.headerLink{
+    font-size: 2rem;/*32px;*/
+    font-family: "Montserrat", sans-serif;
+    color: var(--color-primario);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body{
+    /*height: 100vh;*/
+    box-sizing: border-box;
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+}
+
+.titulo{
+    color: var(--color-primario);
+}
+
+.presentacionmain{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margen de los lados */
+    gap: 82px;
+}
+
+.contenidoPresentacion{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tituloPrincipal{
+    /* tamaño fuente */
+    font-size: 2.25rem;
+    font-family: var(--fuente-secundaria);
+}
+
+.parrafo{
+    font-size: 1.5rem;
+    font-family: var(--fuente-primaria);
+}
+
+/*imagen responsiva*/
+.imagen{
+    width: 50%;
+}
+
+
+
+.nombreAncla{
+    font-size: 1.5rem;
+    font-family: var(--fuente-primaria);
+}
+
+.botones{
+    /* para q funcione el espacio entre */
+    display: flex;
+    justify-content: space-between;
+    
+    /*alinear de forma vertical nuevo*/
+    flex-direction: column;
+    /*botones al centro*/
+    align-items: center;
+    /*espacio entre botones*/
+    gap: 32px;
+    
+
+}
+.paraRedes{
+    font-size: 1.5rem;
+    font-family: var(--fuente-secundaria);
+    /*investigar*/
+    font-weight: 400;
+}
+.ancla{
+    width: 50%;
+    color: var(--color-terciario);
+    /* poner texto al centro del boton */
+    text-align: center;
+    /* espacio entre borde y palabra padding */
+    /* el prmer valor es vertical el segundo horizontal */
+    padding: 21.5px 0;
+    /* borde de boton redondeado */
+    border-radius: 8px;
+    font-size: 1.25rem;/*20px;*/
+    font-family: var(--fuente-primaria);
+    /* grosor de fuente */
+    font-weight: 600;
+    /* quitar linea bajo el text */
+    text-decoration: none;/* none = ninguna decoracion */
+    /*bordes de boton*/
+    border: 2px solid var(--color-primario);
+    /*iconos y nombres alineados*/
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+    
+}
+
+.ancla:hover{
+    background-color: var(--color-hover);
+    padding: 4%;
+    /*para hacer el cursor como punto y no mano*/
+    cursor: pointer;
+}
+
+.piePagina{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: var(--fuente-primaria);
+    padding: 24px;
+}
+
+
+@media (max-width: 1200px) {
+
+    .header{
+        padding: 10%;
+    }
+
+    .navegation{
+        justify-content: center;
+    }
+
+    .presentacionmain{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .contenidoPresentacion{
+        width: auto;
+    }
+    
+}
+  
